@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 struct PhotosListViewModelActions {
     let showPhotoDetail: (Photo) -> Void
@@ -15,10 +16,13 @@ struct PhotosListViewModelActions {
 protocol PhotosListViewModelInput {
     func viewDidLoad()
     func didChooseItem(at index:Int)
+    func loadData()
 }
 
 protocol PhotosListViewModelOutput {
-    var photos:[Photo] { get }
+    // Define name publisher
+    var photos:[Photo] { get set }
+    var photosPublisher: Published<[Photo]>.Publisher { get }
 }
 
 protocol PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput { }
@@ -26,30 +30,42 @@ protocol PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutpu
 class DefaultPhotosListViewModel: PhotosListViewModel {
     
     private let actions:PhotosListViewModelActions?
+    private let useCase: PhotosUseCase
     
-    var photos: [Photo] = []
+    @Published var photos: [Photo] = []
+    var photosPublisher: Published<[Photo]>.Publisher { $photos }
     
-    init(actions:PhotosListViewModelActions?) {
-        self.actions = actions 
+    init(actions: PhotosListViewModelActions?,
+         useCase: PhotosUseCase) {
+        self.actions = actions
+        self.useCase = useCase
     }
     
-    
-    
-
 }
 
 // MARK: - OUTPUT
 extension DefaultPhotosListViewModel {
-
+    
 }
 
 
 // MARK: - INPUT. View event methods
 extension DefaultPhotosListViewModel {
     func viewDidLoad() {
+        loadData()
     }
     
     func didChooseItem(at index: Int) {
         actions?.showPhotoDetail(photos[index])
+    }
+    
+    func loadData() {
+        useCase.loadImagesList { [weak self] response in
+            switch response {
+            case .success(let value):
+                self?.photos = value.sorted(by: { $0.title < $1.title })
+            case .failure(let error): break
+            }
+        }
     }
 }
