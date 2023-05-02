@@ -9,9 +9,9 @@ import Foundation
 
 final class AppConfigs {
     lazy var apiBaseURL: String = {
-        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "api-base-url") as? String else {
-            fatalError("api-base-url need to be defined in plist file")
+        guard let baseURL = Bundle.main.object(forInfoDictionaryKey: "baseDomain") as? String else {
+            fatalError("baseDomain need to be defined in plist file")
         }
-        return apiBaseURL
+        return baseURL
     }()
 }
