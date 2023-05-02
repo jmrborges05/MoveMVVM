@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+struct Comment: Equatable, Identifiable {
+    let id, postId: Int
+    let title, body, author: String
+}
