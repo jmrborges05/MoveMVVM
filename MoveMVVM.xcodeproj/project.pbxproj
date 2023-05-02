@@ -11,12 +11,21 @@
 		1E2AD68C5CF27DF41E15916C /* Pods_MoveMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B5834874F3ED4971E9C3ED /* Pods_MoveMVVMTests.framework */; };
 		B90CD0EA06FB46B7D9014438 /* Pods_MoveMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AEA96A3FF9E1874D7A240A /* Pods_MoveMVVM.framework */; };
 		F145A1532A0131340088AFC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1522A0131340088AFC4 /* AppDelegate.swift */; };
-		F145A1572A0131340088AFC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1562A0131340088AFC4 /* ViewController.swift */; };
 		F145A15C2A0131380088AFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F145A15B2A0131380088AFC4 /* Assets.xcassets */; };
 		F145A15F2A0131380088AFC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F145A15D2A0131380088AFC4 /* LaunchScreen.storyboard */; };
 		F145A16A2A0131390088AFC4 /* MoveMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1692A0131390088AFC4 /* MoveMVVMTests.swift */; };
 		F145A1742A0131390088AFC4 /* MoveMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1732A0131390088AFC4 /* MoveMVVMUITests.swift */; };
 		F145A1762A0131390088AFC4 /* MoveMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1752A0131390088AFC4 /* MoveMVVMUITestsLaunchTests.swift */; };
+		F145A1882A0135740088AFC4 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1872A0135740088AFC4 /* FlowCoordinator.swift */; };
+		F1776F6D2A01378200C71902 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F6C2A01378200C71902 /* AppDIContainer.swift */; };
+		F1776F6F2A0137AB00C71902 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F6E2A0137AB00C71902 /* AppConfigs.swift */; };
+		F1776F712A01387F00C71902 /* PhotosSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F702A01387F00C71902 /* PhotosSceneDIContainer.swift */; };
+		F1776F742A01391400C71902 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F732A01391400C71902 /* Photo.swift */; };
+		F1776F792A013AB400C71902 /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F762A013AB400C71902 /* PhotosListViewController.swift */; };
+		F1776F7A2A013AB400C71902 /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F772A013AB400C71902 /* PhotosListViewModel.swift */; };
+		F1776F7D2A013E2500C71902 /* PhotosFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F7C2A013E2500C71902 /* PhotosFlowCoordinator.swift */; };
+		F1776F822A0141C500C71902 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F7F2A0141C500C71902 /* PhotoDetailViewController.swift */; };
+		F1776F832A0141C500C71902 /* PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F802A0141C500C71902 /* PhotoDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +57,6 @@
 		F0B5834874F3ED4971E9C3ED /* Pods_MoveMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F145A14F2A0131340088AFC4 /* MoveMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F145A1522A0131340088AFC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F145A1562A0131340088AFC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F145A15B2A0131380088AFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F145A15E2A0131380088AFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F145A1602A0131380088AFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +65,16 @@
 		F145A16F2A0131390088AFC4 /* MoveMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoveMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F145A1732A0131390088AFC4 /* MoveMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMVVMUITests.swift; sourceTree = "<group>"; };
 		F145A1752A0131390088AFC4 /* MoveMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F145A1872A0135740088AFC4 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		F1776F6C2A01378200C71902 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		F1776F6E2A0137AB00C71902 /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
+		F1776F702A01387F00C71902 /* PhotosSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSceneDIContainer.swift; sourceTree = "<group>"; };
+		F1776F732A01391400C71902 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F1776F762A013AB400C71902 /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
+		F1776F772A013AB400C71902 /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
+		F1776F7C2A013E2500C71902 /* PhotosFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosFlowCoordinator.swift; sourceTree = "<group>"; };
+		F1776F7F2A0141C500C71902 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		F1776F802A0141C500C71902 /* PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +153,11 @@
 		F145A1512A0131340088AFC4 /* MoveMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				F145A1522A0131340088AFC4 /* AppDelegate.swift */,
-				F145A1562A0131340088AFC4 /* ViewController.swift */,
+				F145A1862A0134B30088AFC4 /* Data */,
+				F145A1852A0134AC0088AFC4 /* Domain */,
+				F145A1842A01348B0088AFC4 /* Network */,
+				F145A1832A0134810088AFC4 /* Presentation */,
+				F145A1822A01339F0088AFC4 /* Application */,
 				F145A15B2A0131380088AFC4 /* Assets.xcassets */,
 				F145A15D2A0131380088AFC4 /* LaunchScreen.storyboard */,
 				F145A1602A0131380088AFC4 /* Info.plist */,
@@ -159,6 +180,84 @@
 				F145A1752A0131390088AFC4 /* MoveMVVMUITestsLaunchTests.swift */,
 			);
 			path = MoveMVVMUITests;
+			sourceTree = "<group>";
+		};
+		F145A1822A01339F0088AFC4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F6B2A01375600C71902 /* DataIntegrationContainer */,
+				F145A1522A0131340088AFC4 /* AppDelegate.swift */,
+				F145A1872A0135740088AFC4 /* FlowCoordinator.swift */,
+				F1776F6E2A0137AB00C71902 /* AppConfigs.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F145A1832A0134810088AFC4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F7E2A0141B300C71902 /* PhotoDetail */,
+				F1776F752A013A7E00C71902 /* PhotosList */,
+				F1776F7C2A013E2500C71902 /* PhotosFlowCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F145A1842A01348B0088AFC4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F145A1852A0134AC0088AFC4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F722A01390500C71902 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F145A1862A0134B30088AFC4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F1776F6B2A01375600C71902 /* DataIntegrationContainer */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F6C2A01378200C71902 /* AppDIContainer.swift */,
+				F1776F702A01387F00C71902 /* PhotosSceneDIContainer.swift */,
+			);
+			path = DataIntegrationContainer;
+			sourceTree = "<group>";
+		};
+		F1776F722A01390500C71902 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F732A01391400C71902 /* Photo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F1776F752A013A7E00C71902 /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F762A013AB400C71902 /* PhotosListViewController.swift */,
+				F1776F772A013AB400C71902 /* PhotosListViewModel.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		F1776F7E2A0141B300C71902 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F1776F7F2A0141C500C71902 /* PhotoDetailViewController.swift */,
+				F1776F802A0141C500C71902 /* PhotoDetailViewModel.swift */,
+			);
+			path = PhotoDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,8 +498,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F145A1572A0131340088AFC4 /* ViewController.swift in Sources */,
+				F1776F742A01391400C71902 /* Photo.swift in Sources */,
+				F1776F7D2A013E2500C71902 /* PhotosFlowCoordinator.swift in Sources */,
+				F1776F7A2A013AB400C71902 /* PhotosListViewModel.swift in Sources */,
 				F145A1532A0131340088AFC4 /* AppDelegate.swift in Sources */,
+				F1776F792A013AB400C71902 /* PhotosListViewController.swift in Sources */,
+				F1776F6F2A0137AB00C71902 /* AppConfigs.swift in Sources */,
+				F145A1882A0135740088AFC4 /* FlowCoordinator.swift in Sources */,
+				F1776F832A0141C500C71902 /* PhotoDetailViewModel.swift in Sources */,
+				F1776F712A01387F00C71902 /* PhotosSceneDIContainer.swift in Sources */,
+				F1776F822A0141C500C71902 /* PhotoDetailViewController.swift in Sources */,
+				F1776F6D2A01378200C71902 /* AppDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +684,6 @@
 				INFOPLIST_FILE = MoveMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -604,7 +711,6 @@
 				INFOPLIST_FILE = MoveMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
