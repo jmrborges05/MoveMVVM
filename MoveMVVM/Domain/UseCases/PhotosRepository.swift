@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol PhotosRepository {
+    func loadImagesList(completion: @escaping (Result<[Photo], Error>) -> Void)
+}

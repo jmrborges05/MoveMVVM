@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol CommentsRepository {
+    func loadComments(
+        for id:Int,
+        completion: @escaping (Result<[Comment], Error>) -> Void
+    )
+}
