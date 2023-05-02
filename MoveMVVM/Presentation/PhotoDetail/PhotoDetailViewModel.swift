@@ -28,10 +28,14 @@ class DefaultPhotoDetailViewModel: PhotoDetailViewModel {
     
     var comments:[Any]?
     
-    init(photo:Photo) {
+    private let commentsUseCase: CommentsUseCase
+    
+    init(photo:Photo,
+         commentsUseCase: CommentsUseCase) {
         self.highResPhoto = photo.highResURL
         self.title = photo.title
         self.id = photo.id
+        self.commentsUseCase = commentsUseCase
     }
     
     // MARK: - OUTPUT
