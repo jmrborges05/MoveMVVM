@@ -20,7 +20,6 @@ class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         bind(to: viewModel)
         viewModel.viewDidLoad()
     }
