@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         flowCoordinator?.start()
         window?.makeKeyAndVisible()
-    
         return true
     }
 }
