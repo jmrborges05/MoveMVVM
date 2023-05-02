@@ -9,10 +9,11 @@
 import Foundation
 
 protocol PhotoListTableViewCellViewModelInput {
-    func viewDidLoad()
 }
 
 protocol PhotoListTableViewCellViewModelOutput {
+    var title: String { get }
+    var thumbnailImage:String { get }
     
 }
 
@@ -20,12 +21,20 @@ protocol PhotoListTableViewCellViewModel: PhotoListTableViewCellViewModelInput, 
 
 class DefaultPhotoListTableViewCellViewModel: PhotoListTableViewCellViewModel {
     
-    // MARK: - OUTPUT
-
+    private var item:Photo
+    
+    var title: String {
+        item.title
+    }
+    
+    var thumbnailImage: String {
+        item.lowResURL
+    }
+    
+    init(photo: Photo) {
+        self.item = photo
+    }
 }
 
 // MARK: - INPUT. View event methods
-extension DefaultPhotoListTableViewCellViewModel {
-    func viewDidLoad() {
-    }
-}
+extension DefaultPhotoListTableViewCellViewModel {}
