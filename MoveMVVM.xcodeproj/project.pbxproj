@@ -11,9 +11,7 @@
 		1E2AD68C5CF27DF41E15916C /* Pods_MoveMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B5834874F3ED4971E9C3ED /* Pods_MoveMVVMTests.framework */; };
 		B90CD0EA06FB46B7D9014438 /* Pods_MoveMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AEA96A3FF9E1874D7A240A /* Pods_MoveMVVM.framework */; };
 		F145A1532A0131340088AFC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1522A0131340088AFC4 /* AppDelegate.swift */; };
-		F145A1552A0131340088AFC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1542A0131340088AFC4 /* SceneDelegate.swift */; };
 		F145A1572A0131340088AFC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1562A0131340088AFC4 /* ViewController.swift */; };
-		F145A15A2A0131340088AFC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F145A1582A0131340088AFC4 /* Main.storyboard */; };
 		F145A15C2A0131380088AFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F145A15B2A0131380088AFC4 /* Assets.xcassets */; };
 		F145A15F2A0131380088AFC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F145A15D2A0131380088AFC4 /* LaunchScreen.storyboard */; };
 		F145A16A2A0131390088AFC4 /* MoveMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1692A0131390088AFC4 /* MoveMVVMTests.swift */; };
@@ -50,9 +48,7 @@
 		F0B5834874F3ED4971E9C3ED /* Pods_MoveMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoveMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F145A14F2A0131340088AFC4 /* MoveMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F145A1522A0131340088AFC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F145A1542A0131340088AFC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F145A1562A0131340088AFC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F145A1592A0131340088AFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F145A15B2A0131380088AFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F145A15E2A0131380088AFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F145A1602A0131380088AFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,9 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F145A1522A0131340088AFC4 /* AppDelegate.swift */,
-				F145A1542A0131340088AFC4 /* SceneDelegate.swift */,
 				F145A1562A0131340088AFC4 /* ViewController.swift */,
-				F145A1582A0131340088AFC4 /* Main.storyboard */,
 				F145A15B2A0131380088AFC4 /* Assets.xcassets */,
 				F145A15D2A0131380088AFC4 /* LaunchScreen.storyboard */,
 				F145A1602A0131380088AFC4 /* Info.plist */,
@@ -278,7 +272,6 @@
 			files = (
 				F145A15F2A0131380088AFC4 /* LaunchScreen.storyboard in Resources */,
 				F145A15C2A0131380088AFC4 /* Assets.xcassets in Resources */,
-				F145A15A2A0131340088AFC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +401,6 @@
 			files = (
 				F145A1572A0131340088AFC4 /* ViewController.swift in Sources */,
 				F145A1532A0131340088AFC4 /* AppDelegate.swift in Sources */,
-				F145A1552A0131340088AFC4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,14 +437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F145A1582A0131340088AFC4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F145A1592A0131340088AFC4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F145A15D2A0131380088AFC4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
