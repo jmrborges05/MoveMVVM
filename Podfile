@@ -11,6 +11,7 @@ target 'MoveMVVM' do
   # Pods for MoveMVVM
   pod 'PureLayout'
   pod 'Alamofire'
+  pod 'Kingfisher'
 
   target 'MoveMVVMTests' do
     inherit! :search_paths
