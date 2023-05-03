@@ -20,9 +20,9 @@ protocol PhotosListViewModelInput {
 }
 
 protocol PhotosListViewModelOutput {
-    // Define name publisher
     var photos:[Photo] { get set }
     var photosPublisher: Published<[Photo]>.Publisher { get }
+    var isLoadingPublisher: Published<Bool>.Publisher { get }
 }
 
 protocol PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput { }
@@ -33,7 +33,9 @@ class DefaultPhotosListViewModel: PhotosListViewModel {
     private let useCase: PhotosUseCase
     
     @Published var photos: [Photo] = []
+    @Published var isLoading: Bool = false
     var photosPublisher: Published<[Photo]>.Publisher { $photos }
+    var isLoadingPublisher: Published<Bool>.Publisher { $isLoading }
     
     init(actions: PhotosListViewModelActions?,
          useCase: PhotosUseCase) {
@@ -60,7 +62,9 @@ extension DefaultPhotosListViewModel {
     }
     
     func loadData() {
+        isLoading = true
         useCase.loadImagesList { [weak self] response in
+            self?.isLoading = false
             switch response {
             case .success(let value):
                 self?.photos = value.sorted(by: { $0.title < $1.title })
