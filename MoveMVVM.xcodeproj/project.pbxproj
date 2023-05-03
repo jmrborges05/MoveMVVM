@@ -19,6 +19,8 @@
 		F145A1882A0135740088AFC4 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145A1872A0135740088AFC4 /* FlowCoordinator.swift */; };
 		F15568DB2A01CF7D00A6A584 /* PhotoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15568D82A01CF7D00A6A584 /* PhotoListTableViewCell.swift */; };
 		F15568DC2A01CF7D00A6A584 /* PhotoListTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15568D92A01CF7D00A6A584 /* PhotoListTableViewCellViewModel.swift */; };
+		F15568E02A01DEFE00A6A584 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15568DF2A01DEFE00A6A584 /* CommentsTableViewCell.swift */; };
+		F15568E22A01DF0A00A6A584 /* CommentsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15568E12A01DF0A00A6A584 /* CommentsTableViewCellViewModel.swift */; };
 		F1776F6D2A01378200C71902 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F6C2A01378200C71902 /* AppDIContainer.swift */; };
 		F1776F6F2A0137AB00C71902 /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F6E2A0137AB00C71902 /* AppConfigs.swift */; };
 		F1776F712A01387F00C71902 /* PhotosSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1776F702A01387F00C71902 /* PhotosSceneDIContainer.swift */; };
@@ -82,6 +84,8 @@
 		F145A1872A0135740088AFC4 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		F15568D82A01CF7D00A6A584 /* PhotoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCell.swift; sourceTree = "<group>"; };
 		F15568D92A01CF7D00A6A584 /* PhotoListTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F15568DF2A01DEFE00A6A584 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		F15568E12A01DF0A00A6A584 /* CommentsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F1776F6C2A01378200C71902 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		F1776F6E2A0137AB00C71902 /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
 		F1776F702A01387F00C71902 /* PhotosSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSceneDIContainer.swift; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F15568DE2A01DEE500A6A584 /* CommentsCell */ = {
+			isa = PBXGroup;
+			children = (
+				F15568DF2A01DEFE00A6A584 /* CommentsTableViewCell.swift */,
+				F15568E12A01DF0A00A6A584 /* CommentsTableViewCellViewModel.swift */,
+			);
+			path = CommentsCell;
+			sourceTree = "<group>";
+		};
 		F1776F6B2A01375600C71902 /* DataIntegrationContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +311,7 @@
 		F1776F7E2A0141B300C71902 /* PhotoDetail */ = {
 			isa = PBXGroup;
 			children = (
+				F15568DE2A01DEE500A6A584 /* CommentsCell */,
 				F1776F7F2A0141C500C71902 /* PhotoDetailViewController.swift */,
 				F1776F802A0141C500C71902 /* PhotoDetailViewModel.swift */,
 			);
@@ -593,6 +607,7 @@
 				F1776F6F2A0137AB00C71902 /* AppConfigs.swift in Sources */,
 				F145A1882A0135740088AFC4 /* FlowCoordinator.swift in Sources */,
 				F1776F832A0141C500C71902 /* PhotoDetailViewModel.swift in Sources */,
+				F15568E22A01DF0A00A6A584 /* CommentsTableViewCellViewModel.swift in Sources */,
 				F1776F912A017B8900C71902 /* PhotosRouter.swift in Sources */,
 				F15568DC2A01CF7D00A6A584 /* PhotoListTableViewCellViewModel.swift in Sources */,
 				F1776F932A017C0000C71902 /* CommentsRouter.swift in Sources */,
@@ -605,6 +620,7 @@
 				F15568DB2A01CF7D00A6A584 /* PhotoListTableViewCell.swift in Sources */,
 				F1776F6D2A01378200C71902 /* AppDIContainer.swift in Sources */,
 				F1776F892A0147FB00C71902 /* CommentsRepository.swift in Sources */,
+				F15568E02A01DEFE00A6A584 /* CommentsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
