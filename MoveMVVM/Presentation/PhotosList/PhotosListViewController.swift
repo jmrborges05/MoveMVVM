@@ -8,12 +8,15 @@
 
 import UIKit
 import Combine
+import PureLayout
 
 class PhotosListViewController: UITableViewController {
     
     var viewModel: PhotosListViewModel!
     private var cancallables = Set<AnyCancellable>()
     
+    private var loadingView:UIActivityIndicatorView?
+
     class func create(with viewModel: PhotosListViewModel) -> PhotosListViewController {
         let vc = PhotosListViewController()
         vc.viewModel = viewModel
@@ -24,8 +27,30 @@ class PhotosListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(reloadData), for: .valueChanged)
         bind(to: viewModel)
         viewModel.viewDidLoad()
+    }
+    
+    @objc
+    func reloadData() {
+        viewModel.viewDidLoad()
+    }
+    
+    func handleLoader(isLoading:Bool = false) {
+        if isLoading {
+            loadingView?.stopAnimating()
+            loadingView?.removeFromSuperview()
+            refreshControl?.endRefreshing()
+        } else {
+            let loader = UIActivityIndicatorView(style: .large)
+            loader.startAnimating()
+            tableView.addSubview(loader)
+            loader.autoCenterInSuperview()
+            loadingView = loader
+        }
     }
     
     func bind(to viewModel: PhotosListViewModel) {
@@ -33,6 +58,13 @@ class PhotosListViewController: UITableViewController {
                .receive(on: RunLoop.main)
                .sink(receiveValue: { [weak self] _ in
                    self?.tableView.reloadData()
+               })
+               .store(in: &cancallables)
+        
+        viewModel.isLoadingPublisher
+               .receive(on: RunLoop.main)
+               .sink(receiveValue: { [weak self] loading in
+                   self?.handleLoader(isLoading: loading)
                })
                .store(in: &cancallables)
     }
